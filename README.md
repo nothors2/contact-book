@@ -8,11 +8,23 @@ var port = process.env.PORT || 3000;
 heroku login
 heroku create jamenada-contact-book
 
+git push heroku master
+
 ### 확인 : 
 [https://jamenada-contact-book.herokuapp.com](https://jamenada-contact-book.herokuapp.com)
 
 ### 에러 체크 
 heroku logs --tail
+### 재시작
+heroku start / stop / restart
+
+## 대쉬보드
+[https://dashboard.heroku.com/apps](https://dashboard.heroku.com/apps)
+
+###환경변수
+heroku config:set MONGO_DB=mongodb+srv://<user>:<pass>@cluster0.x4emn.mongodb.net/board?retryWrites=true&w=majority
+
+
 
 ## 기존 리포지토리 remote 제거
 git remote remove origin
