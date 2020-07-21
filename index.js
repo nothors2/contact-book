@@ -30,7 +30,7 @@ app.use('/', require('./routes/home'));
 app.use('/contacts', require('./routes/contacts'));
 
 // Port setting
-var port = 3000;
+var port = process.env.port||3000;
 app.listen(port, function(){
   console.log('server on! http://localhost:'+port);
 });
